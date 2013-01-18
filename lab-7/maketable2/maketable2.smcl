@@ -1,0 +1,198 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/clarissasweet/Python/QM-Labs/Lab-7/maketable2/maketable2.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 2 Dec 2012, 21:51:30
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/DI/DI9MKEUfGpmM2m77KC1Mfk+++TI/-Tmp-//SD46421.000000"
+{txt}
+{com}. use maketable2, clear
+{txt}
+{com}. 
+. regress logpgp95 avexpr, robust
+
+{txt}Linear regression                                      Number of obs ={res}     111
+                                                       {txt}F(  1,   109) ={res}  334.78
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.6113
+                                                       {txt}Root MSE      = {res} .71793
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}    logpgp95{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}avexpr {c |}{col 14}{res}{space 2} .5318713{col 26}{space 2} .0290688{col 37}{space 1}   18.30{col 46}{space 3}0.000{col 54}{space 4}  .474258{col 67}{space 3} .5894847
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 4.626089{col 26}{space 2} .2406654{col 37}{space 1}   19.22{col 46}{space 3}0.000{col 54}{space 4} 4.149098{col 67}{space 3}  5.10308
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/DI/DI9MKEUfGpmM2m77KC1Mfk+++TI/-Tmp-//SD46421.000000"
+{txt}
+{com}. regress logpgp95 avexpr if baseco==1, robust
+
+{txt}Linear regression                                      Number of obs ={res}      64
+                                                       {txt}F(  1,    62) ={res}  109.38
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.5401
+                                                       {txt}Root MSE      = {res} .71324
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}    logpgp95{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}avexpr {c |}{col 14}{res}{space 2}  .522107{col 26}{space 2} .0499225{col 37}{space 1}   10.46{col 46}{space 3}0.000{col 54}{space 4} .4223133{col 67}{space 3} .6219007
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 4.660383{col 26}{space 2} .3201315{col 37}{space 1}   14.56{col 46}{space 3}0.000{col 54}{space 4}  4.02045{col 67}{space 3} 5.300317
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/DI/DI9MKEUfGpmM2m77KC1Mfk+++TI/-Tmp-//SD46421.000000"
+{txt}
+{com}. regress logpgp95 avexpr lat_abst, robust
+
+{txt}Linear regression                                      Number of obs ={res}     111
+                                                       {txt}F(  2,   108) ={res}  183.95
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.6225
+                                                       {txt}Root MSE      = {res}  .7108
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}    logpgp95{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}avexpr {c |}{col 14}{res}{space 2} .4634816{col 26}{space 2} .0521728{col 37}{space 1}    8.88{col 46}{space 3}0.000{col 54}{space 4}  .360066{col 67}{space 3} .5668972
+{txt}{space 4}lat_abst {c |}{col 14}{res}{space 2} .8721613{col 26}{space 2} .4993736{col 37}{space 1}    1.75{col 46}{space 3}0.084{col 54}{space 4}-.1176837{col 67}{space 3} 1.862006
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 4.872922{col 26}{space 2} .2807513{col 37}{space 1}   17.36{col 46}{space 3}0.000{col 54}{space 4} 4.316424{col 67}{space 3}  5.42942
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/DI/DI9MKEUfGpmM2m77KC1Mfk+++TI/-Tmp-//SD46421.000000"
+{txt}
+{com}. regress logpgp95 avexpr lat_abst if baseco==1, robust
+
+{txt}Linear regression                                      Number of obs ={res}      64
+                                                       {txt}F(  2,    61) ={res}   64.91
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.5745
+                                                       {txt}Root MSE      = {res} .69166
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}    logpgp95{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}avexpr {c |}{col 14}{res}{space 2} .4678871{col 26}{space 2} .0626811{col 37}{space 1}    7.46{col 46}{space 3}0.000{col 54}{space 4} .3425484{col 67}{space 3} .5932257
+{txt}{space 4}lat_abst {c |}{col 14}{res}{space 2} 1.576884{col 26}{space 2} .6506046{col 37}{space 1}    2.42{col 46}{space 3}0.018{col 54}{space 4} .2759197{col 67}{space 3} 2.877848
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 4.728082{col 26}{space 2} .3413732{col 37}{space 1}   13.85{col 46}{space 3}0.000{col 54}{space 4} 4.045464{col 67}{space 3}   5.4107
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/DI/DI9MKEUfGpmM2m77KC1Mfk+++TI/-Tmp-//SD46421.000000"
+{txt}
+{com}. regress logpgp95 avexpr lat_abst africa asia other, robust
+
+{txt}Linear regression                                      Number of obs ={res}     111
+                                                       {txt}F(  5,   105) ={res}   97.09
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.7152
+                                                       {txt}Root MSE      = {res} .62614
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}    logpgp95{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}avexpr {c |}{col 14}{res}{space 2} .3895612{col 26}{space 2} .0510047{col 37}{space 1}    7.64{col 46}{space 3}0.000{col 54}{space 4} .2884282{col 67}{space 3} .4906941
+{txt}{space 4}lat_abst {c |}{col 14}{res}{space 2}  .332564{col 26}{space 2}   .44244{col 37}{space 1}    0.75{col 46}{space 3}0.454{col 54}{space 4}-.5447128{col 67}{space 3} 1.209841
+{txt}{space 6}africa {c |}{col 14}{res}{space 2}-.9163864{col 26}{space 2} .1541114{col 37}{space 1}   -5.95{col 46}{space 3}0.000{col 54}{space 4}-1.221961{col 67}{space 3} -.610812
+{txt}{space 8}asia {c |}{col 14}{res}{space 2}-.1530635{col 26}{space 2} .1805053{col 37}{space 1}   -0.85{col 46}{space 3}0.398{col 54}{space 4}-.5109721{col 67}{space 3} .2048452
+{txt}{space 7}other {c |}{col 14}{res}{space 2} .3035491{col 26}{space 2} .1743288{col 37}{space 1}    1.74{col 46}{space 3}0.085{col 54}{space 4}-.0421128{col 67}{space 3} .6492109
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 5.851084{col 26}{space 2} .2934966{col 37}{space 1}   19.94{col 46}{space 3}0.000{col 54}{space 4} 5.269135{col 67}{space 3} 6.433034
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/DI/DI9MKEUfGpmM2m77KC1Mfk+++TI/-Tmp-//SD46421.000000"
+{txt}
+{com}. regress logpgp95 avexpr lat_abst africa asia other if baseco==1, robust
+
+{txt}Linear regression                                      Number of obs ={res}      64
+                                                       {txt}F(  5,    58) ={res}   53.79
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.7139
+                                                       {txt}Root MSE      = {res} .58163
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}    logpgp95{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}avexpr {c |}{col 14}{res}{space 2} .4012826{col 26}{space 2} .0640653{col 37}{space 1}    6.26{col 46}{space 3}0.000{col 54}{space 4} .2730419{col 67}{space 3} .5295233
+{txt}{space 4}lat_abst {c |}{col 14}{res}{space 2} .8752965{col 26}{space 2} .6142898{col 37}{space 1}    1.42{col 46}{space 3}0.160{col 54}{space 4}-.3543381{col 67}{space 3} 2.104931
+{txt}{space 6}africa {c |}{col 14}{res}{space 2}-.8806805{col 26}{space 2} .1555275{col 37}{space 1}   -5.66{col 46}{space 3}0.000{col 54}{space 4}-1.192003{col 67}{space 3}-.5693585
+{txt}{space 8}asia {c |}{col 14}{res}{space 2}-.5767549{col 26}{space 2} .2991853{col 37}{space 1}   -1.93{col 46}{space 3}0.059{col 54}{space 4}-1.175639{col 67}{space 3} .0221296
+{txt}{space 7}other {c |}{col 14}{res}{space 2}  .107205{col 26}{space 2} .2229782{col 37}{space 1}    0.48{col 46}{space 3}0.632{col 54}{space 4}-.3391344{col 67}{space 3} .5535445
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 5.736729{col 26}{space 2} .3893229{col 37}{space 1}   14.74{col 46}{space 3}0.000{col 54}{space 4} 4.957415{col 67}{space 3} 6.516044
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/DI/DI9MKEUfGpmM2m77KC1Mfk+++TI/-Tmp-//SD46421.000000"
+{txt}
+{com}. regress loghjypl avexpr, robust
+
+{txt}Linear regression                                      Number of obs ={res}     108
+                                                       {txt}F(  1,   106) ={res}  230.57
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.5541
+                                                       {txt}Root MSE      = {res} .71344
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}    loghjypl{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}avexpr {c |}{col 14}{res}{space 2} .4462022{col 26}{space 2} .0293855{col 37}{space 1}   15.18{col 46}{space 3}0.000{col 54}{space 4} .3879427{col 67}{space 3} .5044617
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} -4.82763{col 26}{space 2} .2431068{col 37}{space 1}  -19.86{col 46}{space 3}0.000{col 54}{space 4}-5.309612{col 67}{space 3}-4.345647
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/DI/DI9MKEUfGpmM2m77KC1Mfk+++TI/-Tmp-//SD46421.000000"
+{txt}
+{com}. regress loghjypl avexpr if baseco==1, robust
+
+{txt}Linear regression                                      Number of obs ={res}      61
+                                                       {txt}F(  1,    59) ={res}   84.18
+                                                       {txt}Prob > F      = {res} 0.0000
+                                                       {txt}R-squared     = {res} 0.4862
+                                                       {txt}Root MSE      = {res} .70894
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}    Robust
+{col 1}    loghjypl{col 14}{c |}      Coef.{col 26}   Std. Err.{col 38}      t{col 46}   P>|t|{col 54}     [95% Con{col 67}f. Interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 6}avexpr {c |}{col 14}{res}{space 2} .4571098{col 26}{space 2}   .04982{col 37}{space 1}    9.18{col 46}{space 3}0.000{col 54}{space 4} .3574203{col 67}{space 3} .5567993
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-4.911738{col 26}{space 2} .3232883{col 37}{space 1}  -15.19{col 46}{space 3}0.000{col 54}{space 4}-5.558636{col 67}{space 3}-4.264839
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/clarissasweet/Python/QM-Labs/Lab-7/maketable2/maketable2.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res} 2 Dec 2012, 22:57:35
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

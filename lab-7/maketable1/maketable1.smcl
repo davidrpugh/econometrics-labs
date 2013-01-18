@@ -1,0 +1,408 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/clarissasweet/Python/QM-Labs/Lab-7/maketable1/maketable1.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 2 Dec 2012, 19:31:15
+{txt}
+{com}. 
+. /*Data Files Used
+>         maketable1.dta
+>         
+> *Data Files Created as Final Product
+>         none
+>         
+> *Data Files Created as Intermediate Product
+>         none*/
+.         
+. 
+. ****************************
+. *---column 1 (whole world)
+. ****************************
+. 
+. use maketable1, clear
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/DI/DI9MKEUfGpmM2m77KC1Mfk+++TI/-Tmp-//SD46421.000000"
+{txt}
+{com}. use maketable1, clear
+{txt}
+{com}. 
+. *log GDP per capita, PPP, in 1995
+. summ logpgp95
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 4}logpgp95 {c |}{res}       148    8.302509    1.105342   6.109248   10.28875
+{txt}
+{com}. 
+. *log output per worker in 1988
+. summ loghjypl
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 4}loghjypl {c |}{res}       123   -1.731106    1.083726  -3.540459          0
+{txt}
+{com}. 
+. *Average protection against expropriation risk, 1985-1995
+. summ avexpr 
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 6}avexpr {c |}{res}       121    7.066491    1.804287   1.636364         10
+{txt}
+{com}. 
+. *Constraint on executive, 1900
+. summ cons00a
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 5}cons00a {c |}{res}        91    1.857143    1.823132          1          7
+{txt}
+{com}. 
+. *Constraint on executive in first year of independence
+. summ cons1
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 7}cons1 {c |}{res}        88    3.590909    2.414689          1          7
+{txt}
+{com}. 
+. *Democracy in 1900
+. summ democ00a
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 4}democ00a {c |}{res}        87    1.149425    2.576859          0         10
+{txt}
+{com}. 
+. *European settlement in 1900
+. summ euro1900 
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 4}euro1900 {c |}{res}       154    30.46623    42.38986          0        100
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/DI/DI9MKEUfGpmM2m77KC1Mfk+++TI/-Tmp-//SD46421.000000"
+{txt}
+{com}. use maketable1, clear
+{txt}
+{com}. 
+. keep if baseco==1
+{txt}(99 observations deleted)
+
+{com}. 
+. *log GDP per capita, PPP, in 1995
+. summ logpgp95
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 4}logpgp95 {c |}{res}        64    8.062237    1.043359   6.109248   10.21574
+{txt}
+{com}. 
+. *log output per worker in 1988
+. summ loghjypl
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 4}loghjypl {c |}{res}        61   -1.934052    .9807444  -3.540459          0
+{txt}
+{com}. 
+. *Average protection against expropriation risk, 1985-1995
+. summ avexpr 
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 6}avexpr {c |}{res}        64    6.515625    1.468647        3.5         10
+{txt}
+{com}. 
+. *Constraint on executive, 1900
+. summ cons00a
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 5}cons00a {c |}{res}        60        2.25    2.112313          1          7
+{txt}
+{com}. 
+. *Constraint on executive in first year of independence
+. summ cons1
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 7}cons1 {c |}{res}        60         3.4     2.39491          1          7
+{txt}
+{com}. 
+. *Democracy in 1900
+. summ democ00a
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 4}democ00a {c |}{res}        59    1.644068     3.00438          0         10
+{txt}
+{com}. 
+. *European settlement in 1900
+. summ euro1900 
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 4}euro1900 {c |}{res}        63    16.18095    25.53334          0         99
+{txt}
+{com}. 
+. *Log European settler mortality
+. summ logem4
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 6}logem4 {c |}{res}        64    4.657031    1.257984   2.145931   7.986165
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/DI/DI9MKEUfGpmM2m77KC1Mfk+++TI/-Tmp-//SD46421.000000"
+{txt}
+{com}. *log GDP per capita, PPP, in 1995
+. sum logpgp95 if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4<65.4 & extmort4~=.
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 4}logpgp95 {c |}{res}        14      8.8882    1.289533   6.109248   10.21574
+{txt}
+{com}. sum logpgp95 if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4>=65.4 & extmort4<78.1
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 4}logpgp95 {c |}{res}        18    8.407695    .6391374   6.877296   9.336092
+{txt}
+{com}. sum logpgp95 if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4>=78.1 & extmort4<280
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 4}logpgp95 {c |}{res}        17    7.777815    .8016637   6.253829   9.285448
+{txt}
+{com}. sum logpgp95 if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4>=280 & extmort4~=.
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 4}logpgp95 {c |}{res}        15    7.199134    .6261228   6.253829   8.907883
+{txt}
+{com}. 
+. *log output per worker in 1988
+. sum loghjypl if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4<65.4 & extmort4~=.
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 4}loghjypl {c |}{res}        13   -1.025412    .8607438  -2.453408          0
+{txt}
+{com}. sum loghjypl if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4>=65.4 & extmort4<78.1
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 4}loghjypl {c |}{res}        18   -1.463018    .4217214  -2.063568  -.7031975
+{txt}
+{com}. sum loghjypl if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4>=78.1 & extmort4<280
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 4}loghjypl {c |}{res}        15   -2.195082    .8013878  -3.442019  -.6971552
+{txt}
+{com}. sum loghjypl if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4>=280 & extmort4~=.
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 4}loghjypl {c |}{res}        15   -3.025752    .4766276  -3.540459  -1.851509
+{txt}
+{com}. 
+. *Average protection against expropriation risk, 1985-1995
+. sum avexpr if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4<65.4 & extmort4~=.
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 6}avexpr {c |}{res}        14    7.904221    1.547669   5.727273         10
+{txt}
+{com}. sum avexpr if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4>=65.4 & extmort4<78.1
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 6}avexpr {c |}{res}        18    6.468434    .9539449          5   7.909091
+{txt}
+{com}. sum avexpr if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4>=78.1 & extmort4<280
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 6}avexpr {c |}{res}        17    5.973262    1.320048        3.5   7.590909
+{txt}
+{com}. sum avexpr if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4>=280 & extmort4~=.
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 6}avexpr {c |}{res}        15    5.890909    1.295802          4   8.272727
+{txt}
+{com}. 
+. *Constraint on executive, 1900
+. sum cons00a if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4<65.4 & extmort4~=.
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 5}cons00a {c |}{res}        12    3.666667    2.994945          1          7
+{txt}
+{com}. sum cons00a if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4>=65.4 & extmort4<78.1
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 5}cons00a {c |}{res}        18    3.277778     2.10896          1          7
+{txt}
+{com}. sum cons00a if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4>=78.1 & extmort4<280
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 5}cons00a {c |}{res}        16       1.125          .5          1          3
+{txt}
+{com}. sum cons00a if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4>=280 & extmort4~=.
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 5}cons00a {c |}{res}        14           1           0          1          1
+{txt}
+{com}. 
+. *Constraint on executive in 1990
+. sum cons90 if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4<65.4 & extmort4~=.
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 6}cons90 {c |}{res}        12    5.333333    2.103388          2          7
+{txt}
+{com}. sum cons90 if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4>=65.4 & extmort4<78.1
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 6}cons90 {c |}{res}        17    5.117647    1.798692          2          7
+{txt}
+{com}. sum cons90 if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4>=78.1 & extmort4<280
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 6}cons90 {c |}{res}        16      3.3125    2.182315          1          7
+{txt}
+{com}. sum cons90 if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4>=280 & extmort4~=.
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 6}cons90 {c |}{res}        15    2.266667    1.579632          1          7
+{txt}
+{com}. 
+. *Constraint on executive in first year of independence
+. sum cons1 if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4<65.4 & extmort4~=.
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 7}cons1 {c |}{res}        12    5.166667    2.757909          1          7
+{txt}
+{com}. sum cons1 if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4>=65.4 & extmort4<78.1
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 7}cons1 {c |}{res}        18    2.444444     1.91656          1          7
+{txt}
+{com}. sum cons1 if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4>=78.1 & extmort4<280
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 7}cons1 {c |}{res}        16       3.125    2.276694          1          7
+{txt}
+{com}. sum cons1 if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4>=280 & extmort4~=.
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 7}cons1 {c |}{res}        14    3.428571     2.13809          1          7
+{txt}
+{com}. 
+. *Democracy in 1900
+. sum democ00a if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4<65.4 & extmort4~=.
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 4}democ00a {c |}{res}        12    3.916667    4.581749          0         10
+{txt}
+{com}. sum democ00a if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4>=65.4 & extmort4<78.1
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 4}democ00a {c |}{res}        17    2.764706     2.90537          0         10
+{txt}
+{com}. sum democ00a if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4>=78.1 & extmort4<280
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 4}democ00a {c |}{res}        16       .1875    .4031129          0          1
+{txt}
+{com}. sum democ00a if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4>=280 & extmort4~=.
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 4}democ00a {c |}{res}        14           0           0          0          0
+{txt}
+{com}. 
+. *European settlement in 1900
+. sum euro1900 if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4<65.4 & extmort4~=.
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 4}euro1900 {c |}{res}        13    31.73077    43.92257          0         99
+{txt}
+{com}. sum euro1900 if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4>=65.4 & extmort4<78.1
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 4}euro1900 {c |}{res}        18    25.55556    17.97784          0         60
+{txt}
+{com}. sum euro1900 if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4>=78.1 & extmort4<280
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 4}euro1900 {c |}{res}        17    8.170588    11.79967          0         40
+{txt}
+{com}. sum euro1900 if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4>=280 & extmort4~=.
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 4}euro1900 {c |}{res}        15    .5333333    2.065591          0          8
+{txt}
+{com}. 
+. *Log European settler mortality
+. sum logem4 if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4<65.4 & extmort4~=.
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 6}logem4 {c |}{res}        14    3.009049    .5931738   2.145931   4.143135
+{txt}
+{com}. sum logem4 if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4>=65.4 & extmort4<78.1
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 6}logem4 {c |}{res}        18     4.28263    .0500057   4.216562    4.35799
+{txt}
+{com}. sum logem4 if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4>=78.1 & extmort4<280
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 6}logem4 {c |}{res}        17    4.919492    .4009402    4.35927   5.634789
+{txt}
+{com}. sum logem4 if excolony==1 & extmort4~=. & avexpr~=. & logpgp95~=. & extmort4>=280 & extmort4~=.
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 6}logem4 {c |}{res}        15    6.346973    .7538307   5.634789   7.986165
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "/var/folders/DI/DI9MKEUfGpmM2m77KC1Mfk+++TI/-Tmp-//SD46421.000000"
+{txt}
+{com}. capture log close
+{smcl}
+{com}{sf}{ul off}
